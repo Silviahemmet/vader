@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Helsingfors Väder</title>
+<style>
+body{margin:0;background:#005AA3;color:#fff;font-family:Segoe UI,Arial,sans-serif}
+.container{padding:30px;height:100vh;box-sizing:border-box}
+h1{text-align:center;font-size:54px;border-bottom:2px solid rgba(255,255,255,.3);padding-bottom:20px}
+.current{display:flex;justify-content:space-between;align-items:center;margin:40px 0}
+.icon{font-size:150px}.temp{font-size:120px;font-weight:bold}.desc{font-size:32px}
+.details{font-size:28px;line-height:1.8}
+.forecast{display:grid;grid-template-columns:repeat(7,1fr);gap:16px}
+.card{background:rgba(255,255,255,.08);border-radius:18px;padding:15px;text-align:center}
+.day{font-weight:bold}.wicon{font-size:42px;margin:10px 0}.t{font-size:24px}
+footer{text-align:center;margin-top:25px;font-size:20px}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>HELSINGFORS VÄDER</h1>
+<div class="current">
+<div id="icon" class="icon">☀️</div>
+<div><div id="temp" class="temp">--°</div><div id="desc" class="desc">Laddar...</div></div>
+<div class="details">💨 <span id="wind">--</span> m/s<br>💧 <span id="humidity">--</span>%</div>
+</div>
+<div id="forecast" class="forecast"></div>
+<footer>Senast uppdaterad: <span id="updated"></span></footer>
+</div>
+<script>
+const map={0:["☀️","Klart"],1:["🌤️","Mest klart"],2:["⛅","Delvis molnigt"],3:["☁️","Mulet"],45:["🌫️","Dimma"],61:["🌦️","Regn"],63:["🌧️","Regn"],71:["❄️","Snö"],80:["🌦️","Skurar"],95:["⛈️","Åska"]};
+async function load(){
+const r=await fetch("https://api.open-meteo.com/v1/forecast?latitude=60.17&longitude=24.94&current=temperature_2m,weather_code,wind_speed_10m,relative_humidity_2m&daily=weather_code,temperature_2m_max,temperature_2m_min&timezone=Europe/Helsinki");
+const d=await r.json();
+const c=d.current,m=map[c.weather_code]||["⛅","Väder"];
+icon.textContent=m[0];temp.textContent=Math.round(c.temperature_2m)+"°";desc.textContent=m[1];
+wind.textContent=Math.round(c.wind_speed_10m);humidity.textContent=c.relative_humidity_2m;
+updated.textContent=new Date().toLocaleTimeString("sv-SE",{hour:"2-digit",minute:"2-digit"});
+const days=["SÖN","MÅN","TIS","ONS","TOR","FRE","LÖR"];
+forecast.innerHTML="";
+d.daily.time.forEach((t,i)=>{
+ const dt=new Date(t);
+ const ic=(map[d.daily.weather_code[i]]||["⛅"])[0];
+ forecast.innerHTML+=`<div class="card"><div class="day">${days[dt.getDay()]}</div><div class="wicon">${ic}</div><div class="t">${Math.round(d.daily.temperature_2m_max[i])}° / ${Math.round(d.daily.temperature_2m_min[i])}°</div></div>`;
+});
+}
+load();setInterval(load,600000);
+</script>
+</body>
+</html>
