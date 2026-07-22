@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Silviahemmet – Väder</title>
+<style>
+:root{--blue:#005ea8;--panel:rgba(255,255,255,.12)}
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family:Segoe UI,Arial,sans-serif;
+background:linear-gradient(180deg,#005ea8,#0b7ac9);
+color:#fff;
+height:100vh;
+overflow:hidden}
+.wrap{padding:40px;height:100%;display:flex;flex-direction:column}
+header{display:flex;justify-content:space-between;align-items:center}
+h1{margin:0;font-size:56px}
+#clock{font-size:34px;font-weight:600}
+.main{display:flex;justify-content:space-between;align-items:center;flex:1}
+.left{display:flex;align-items:center;gap:35px}
+#icon{font-size:150px}
+#temp{font-size:130px;font-weight:700;line-height:1}
+#desc{font-size:36px}
+.info{font-size:28px;line-height:1.8}
+.cards{display:grid;grid-template-columns:repeat(7,1fr);gap:18px}
+.card{background:var(--panel);border-radius:20px;padding:18px;text-align:center;backdrop-filter:blur(8px)}
+.day{font-size:22px;font-weight:700}
+.i{font-size:42px;margin:8px 0}
+.t{font-size:22px}
+footer{text-align:center;font-size:22px;padding-top:20px;opacity:.9}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<h1>Helsingfors Väder</h1>
+<div id="clock"></div>
+</header>
+
+<div class="main">
+<div class="left">
+<div id="icon">☀️</div>
+<div>
+<div id="temp">--°</div>
+<div id="desc">Laddar...</div>
+</div>
+</div>
+
+<div class="info">
+💨 Vind: <span id="wind">--</span> km/h<br>
+💧 Luftfuktighet: <span id="humidity">--</span>%<br>
+🌅 Soluppgång: <span id="sunrise">--:--</span><br>
+🌇 Solnedgång: <span id="sunset">--:--</span>
+</div>
+</div>
+
+<div id="forecast" class="cards"></div>
+
+<footer>Uppdateras automatiskt var 10:e minut</footer>
+</div>
+
+<script>
+const W={
+0:["☀️","Klart"],1:["🌤️","Mest klart"],2:["⛅","Delvis molnigt"],3:["☁️","Mulet"],
+45:["🌫️","Dimma"],51:["🌦️","Duggregn"],61:["🌧️","Regn"],63:["🌧️","Regn"],
+71:["❄️","Snö"],80:["🌦️","Skurar"],95:["⛈️","Åska"]
+};
+function tick(){clock.textContent=new Date().toLocaleTimeString("sv-SE",{hour:"2-digit",minute:"2-digit"});}
+tick();setInterval(tick,1000);
+
+async function load(){
+const url="https://api.open-meteo.com/v1/forecast?latitude=60.1699&longitude=24.9384&current=temperature_2m,relative_humidity_2m,wind_speed_10m,weather_code&daily=weather_code,temperature_2m_max,temperature_2m_min,sunrise,sunset&timezone=Europe/Helsinki";
+const r=await fetch(url);
+const d=await r.json();
+const c=d.current;
+const m=W[c.weather_code]||["🌤️","Väder"];
+icon.textContent=m[0];
+temp.textContent=Math.round(c.temperature_2m)+"°";
+desc.textContent=m[1];
+wind.textContent=Math.round(c.wind_speed_10m);
+humidity.textContent=c.relative_humidity_2m;
+sunrise.textContent=d.daily.sunrise[0].substring(11,16);
+sunset.textContent=d.daily.sunset[0].substring(11,16);
+
+const names=["Sön","Mån","Tis","Ons","Tor","Fre","Lör"];
+forecast.innerHTML="";
+d.daily.time.forEach((t,i)=>{
+let dt=new Date(t);
+let x=W[d.daily.weather_code[i]]||["🌤️",""];
+forecast.innerHTML+=`<div class="card">
+<div class="day">${names[dt.getDay()]}</div>
+<div class="i">${x[0]}</div>
+<div class="t">${Math.round(d.daily.temperature_2m_max[i])}°</div>
+<div>${Math.round(d.daily.temperature_2m_min[i])}°</div>
+</div>`;
+});
+}
+load();
+setInterval(load,600000);
+</script>
+</body>
+</html>
