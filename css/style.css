@@ -211,5 +211,13 @@ object-position:center;
 }
 /* Dölj inte designen - låt musklick gå igenom */
 .mask {
+/* Ta bort alla bakgrundsrutor från live-lagret */
+#clock,
+#temperature,
+#wind {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
     pointer-events:none;
 }
