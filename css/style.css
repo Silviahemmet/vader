@@ -1,105 +1,39 @@
-html,body{
-margin:0;
-padding:0;
-width:100%;
-height:100%;
-overflow:hidden;
-background:#062f68;
-}
-
-.dashboard{
-width:100vw;
-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-}
-
-.master{
-max-width:100vw;
-max-height:100vh;
-width:100%;
-height:100%;
-object-fit:contain;
-object-position:center;
-}
-.dashboard {
-    position: relative;
-    width: min(100vw, 1664px);
-    height: auto;
-    margin: auto;
-}
-    overflow: hidden;
-}
-
-
-.master {
-    width:100%;
-    height:auto;
-    display:block;
-}
-    object-fit: contain;
-    display: block;
-}
-
-
-/* Funktionella lager */
-
-.clock-window {
-    position:absolute;
-    top:5%;
-    left:13%;
-    width:30%;
-    height:12%;
-    z-index:10;
-    #clock {
-    font-size: 8vw;
-    font-weight:700;
-    color:white;
-    white-space:nowrap;
-}
-}
-#clock {
+html, body {
+    margin:0;
+    padding:0;
     width:100%;
     height:100%;
+    overflow:hidden;
+    background:#062f68;
+}
+
+.dashboard {
+    position:relative;
+    width:100vw;
+    height:100vh;
     display:flex;
     align-items:center;
     justify-content:center;
-    color:white;
 }
-}
-    color: white;
-    font-size: 5vw;
-    font-weight: bold;
+
+.master {
+    width:100%;
+    height:100%;
+    object-fit:contain;
 }
 
 
-.temp-window {
-    top:25%;
-    left:22%;
-}
-    color: white;
-    font-size: 4vw;
-    font-weight: bold;
-}
+/* Alla live-fönster */
 
-
-.wind-window {
-    top:41%;
-    left:27%;
-}
-    color: white;
-    font-size: 2vw;
-}
 .window {
     position:absolute;
     overflow:hidden;
     background:transparent;
-    z-index:5;
+    z-index:10;
 }
 
 
-/* Klocka */
+/* KLOCKA */
 
 .clock-window {
     top:3%;
@@ -109,21 +43,26 @@ object-position:center;
 }
 
 #clock {
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
     color:white;
     font-size:5vw;
     font-weight:bold;
+    white-space:nowrap;
 }
 
 
-/* Temperatur */
+/* TEMPERATUR */
 
 .temp-window {
     top:22%;
     left:20%;
-    width:20%;
+    width:25%;
     height:12%;
 }
-
 
 #temperature {
     color:white;
@@ -132,112 +71,27 @@ object-position:center;
 }
 
 
-/* Vind */
+/* VIND */
 
 .wind-window {
     top:39%;
     left:22%;
-    width:25%;
-    height:8%;
-}
-/* Masklager som döljer gammal text i MASTER */
-
-.mask {
-    position:absolute;
-    z-index:4;
-}
-
-
-/* Klockans gamla område */
-
-.clock-mask {
-    top:3%;
-    left:6%;
-    width:27%;
-    height:14%;
-
-    background:#12336d;
-}
-
-
-/* Temperaturens gamla område */
-
-.temp-mask {
-    top:21%;
-    left:20%;
-    width:25%;
-    height:15%;
-
-    background:#2d72b8;
-}
-
-
-/* Vindens gamla område */
-
-.wind-mask {
-    top:38%;
-    left:22%;
     width:30%;
     height:8%;
-
-    background:#2d72b8;
 }
 
 #wind {
     color:white;
     font-size:2vw;
 }
-/* Döljer gamla siffror från MASTER */
-
-.clock-mask {
-    position:absolute;
-    top:4%;
-    left:8%;
-    width:27%;
-    height:12%;
-    background:transparent;
-    z-index:4;
-}
-
-.temp-mask {
-    position:absolute;
-    top:23%;
-    left:21%;
-    width:25%;
-    height:12%;
-    background:transparent;
-    z-index:4;
-}
-
-.wind-mask {
-    position:absolute;
-    top:39%;
-    left:23%;
-    width:30%;
-    height:8%;
-    background:transparent;
-    z-index:4;
-}
 
 
-/* Levande värden ovanpå */
+/* Ingena bakgrunder på live-lager */
 
-#clock {
-    position:absolute;
-    top:5%;
-    left:8%;
-    z-index:10;
-}
-}
-/* Dölj inte designen - låt musklick gå igenom */
-.mask {
-/* Ta bort alla bakgrundsrutor från live-lagret */
 #clock,
 #temperature,
 #wind {
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-}
-    pointer-events:none;
+    background:transparent;
+    border:none;
+    box-shadow:none;
 }
