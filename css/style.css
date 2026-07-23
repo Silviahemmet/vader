@@ -203,11 +203,12 @@ object-position:center;
 
 /* Levande värden ovanpå */
 
-#clock,
-#temperature,
-#wind {
-    z-index:5;
+#clock {
     position:absolute;
+    top:5%;
+    left:8%;
+    z-index:10;
+}
 }
 /* Dölj inte designen - låt musklick gå igenom */
 .mask {
