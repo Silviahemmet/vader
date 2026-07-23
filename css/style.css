@@ -176,7 +176,7 @@ object-position:center;
     left:8%;
     width:27%;
     height:12%;
-    background:#143575;
+    background:transparent;
     z-index:4;
 }
 
@@ -186,7 +186,7 @@ object-position:center;
     left:21%;
     width:25%;
     height:12%;
-    background:#347bc0;
+    background:transparent;
     z-index:4;
 }
 
@@ -196,7 +196,7 @@ object-position:center;
     left:23%;
     width:30%;
     height:8%;
-    background:#347bc0;
+    background:transparent;
     z-index:4;
 }
 
@@ -208,4 +208,8 @@ object-position:center;
 #wind {
     z-index:5;
     position:absolute;
+}
+/* Dölj inte designen - låt musklick gå igenom */
+.mask {
+    pointer-events:none;
 }
