@@ -23,3 +23,48 @@ height:100%;
 object-fit:contain;
 object-position:center;
 }
+.dashboard {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+.master {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+
+/* Funktionella lager */
+
+#clock {
+    position: absolute;
+    top: 5%;
+    left: 8%;
+    color: white;
+    font-size: 5vw;
+    font-weight: bold;
+}
+
+
+#temperature {
+    position: absolute;
+    top: 25%;
+    left: 28%;
+    color: white;
+    font-size: 4vw;
+    font-weight: bold;
+}
+
+
+#wind {
+    position: absolute;
+    top: 42%;
+    left: 28%;
+    color: white;
+    font-size: 2vw;
+}
