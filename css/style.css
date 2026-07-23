@@ -47,11 +47,17 @@ object-position:center;
 
 .clock-window {
     position:absolute;
-    top:4%;
-    left:8%;
+    top:5%;
+    left:13%;
     width:30%;
     height:12%;
     z-index:10;
+    #clock {
+    font-size: 8vw;
+    font-weight:700;
+    color:white;
+    white-space:nowrap;
+}
 }
 #clock {
     width:100%;
