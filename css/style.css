@@ -68,3 +68,58 @@ object-position:center;
     color: white;
     font-size: 2vw;
 }
+.window {
+    position:absolute;
+    overflow:hidden;
+    background:transparent;
+    z-index:5;
+}
+
+
+/* Klocka */
+
+.clock-window {
+    top:3%;
+    left:7%;
+    width:25%;
+    height:13%;
+}
+
+#clock {
+    color:white;
+    font-size:5vw;
+    font-weight:bold;
+}
+
+
+/* Temperatur */
+
+.temp-window {
+    top:22%;
+    left:20%;
+    width:20%;
+    height:12%;
+}
+
+
+#temperature {
+    color:white;
+    font-size:4vw;
+    font-weight:bold;
+}
+
+
+/* Vind */
+
+.wind-window {
+    top:39%;
+    left:22%;
+    width:25%;
+    height:8%;
+}
+
+
+#wind {
+    color:white;
+    font-size:2vw;
+}
