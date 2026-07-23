@@ -45,30 +45,30 @@ object-position:center;
 
 /* Funktionella lager */
 
-#clock {
-    position: absolute;
-    top: 5%;
-    left: 8%;
+.clock-window {
+    top:4%;
+    left:11%;
+}
     color: white;
     font-size: 5vw;
     font-weight: bold;
 }
 
 
-#temperature {
-    position: absolute;
-    top: 25%;
-    left: 28%;
+.temp-window {
+    top:25%;
+    left:22%;
+}
     color: white;
     font-size: 4vw;
     font-weight: bold;
 }
 
 
-#wind {
-    position: absolute;
-    top: 42%;
-    left: 28%;
+.wind-window {
+    top:41%;
+    left:27%;
+}
     color: white;
     font-size: 2vw;
 }
