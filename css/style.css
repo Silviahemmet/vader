@@ -121,9 +121,91 @@ object-position:center;
     width:25%;
     height:8%;
 }
+/* Masklager som döljer gammal text i MASTER */
 
+.mask {
+    position:absolute;
+    z-index:4;
+}
+
+
+/* Klockans gamla område */
+
+.clock-mask {
+    top:3%;
+    left:6%;
+    width:27%;
+    height:14%;
+
+    background:#12336d;
+}
+
+
+/* Temperaturens gamla område */
+
+.temp-mask {
+    top:21%;
+    left:20%;
+    width:25%;
+    height:15%;
+
+    background:#2d72b8;
+}
+
+
+/* Vindens gamla område */
+
+.wind-mask {
+    top:38%;
+    left:22%;
+    width:30%;
+    height:8%;
+
+    background:#2d72b8;
+}
 
 #wind {
     color:white;
     font-size:2vw;
+}
+/* Döljer gamla siffror från MASTER */
+
+.clock-mask {
+    position:absolute;
+    top:4%;
+    left:8%;
+    width:27%;
+    height:12%;
+    background:#143575;
+    z-index:4;
+}
+
+.temp-mask {
+    position:absolute;
+    top:23%;
+    left:21%;
+    width:25%;
+    height:12%;
+    background:#347bc0;
+    z-index:4;
+}
+
+.wind-mask {
+    position:absolute;
+    top:39%;
+    left:23%;
+    width:30%;
+    height:8%;
+    background:#347bc0;
+    z-index:4;
+}
+
+
+/* Levande värden ovanpå */
+
+#clock,
+#temperature,
+#wind {
+    z-index:5;
+    position:absolute;
 }
