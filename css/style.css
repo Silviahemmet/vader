@@ -4,7 +4,7 @@
    ========================================================= */
 
 
-/* ================= RESET ================= */
+/* RESET */
 
 * {
     margin:0;
@@ -27,7 +27,10 @@ body {
 
 
 
-/* ================= DASHBOARD ================= */
+/* =========================================================
+   MAIN DASHBOARD
+   ========================================================= */
+
 
 .dashboard {
 
@@ -42,7 +45,10 @@ body {
 
 
 
-/* ================= MASTER IMAGE ================= */
+/* =========================================================
+   MASTER IMAGE BACKGROUND
+   ========================================================= */
+
 
 .master {
 
@@ -51,8 +57,8 @@ body {
     left:0;
     top:0;
 
-    width:100vw;
-    height:100vh;
+    width:100%;
+    height:100%;
 
     object-fit:contain;
 
@@ -62,20 +68,23 @@ body {
 
 
 
-/* ================= CLOCK ================= */
+/* =========================================================
+   CLOCK
+   Move it by changing left/top only
+   ========================================================= */
+
 
 .clock-window {
 
     position:absolute;
 
-    left:0;
-    top:0;
-
-    transform:translate(800px,35px);
+    left:590px;
+    top:35px;
 
     z-index:10;
 
 }
+
 
 
 #clock {
@@ -101,20 +110,37 @@ body {
 
 
 
-/* ================= TEMPERATURE ================= */
+/* =========================================================
+   WEATHER GROUP
+   Change these two numbers to move ALL weather
+   ========================================================= */
+
 
 .temp-window {
 
     position:absolute;
 
-    left:0;
-    top:0;
+    left:430px;
+    top:220px;
 
-    transform:translate(520px,210px);
+    width:450px;
+    height:250px;
 
     z-index:10;
 
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
 }
+
+
+
+/* TEMPERATURE */
 
 
 #temperature {
@@ -126,7 +152,7 @@ body {
     "Times New Roman",
     serif;
 
-    font-size:50px;
+    font-size:70px;
 
     font-weight:bold;
 
@@ -138,20 +164,24 @@ body {
 
 
 
-/* ================= WIND ================= */
+/* WIND */
+
 
 .wind-window {
 
     position:absolute;
 
-    left:0;
-    top:0;
+    left:430px;
+    top:350px;
 
-    transform:translate(520px,300px);
+    width:450px;
 
     z-index:10;
 
+    text-align:center;
+
 }
+
 
 
 #wind {
@@ -163,7 +193,7 @@ body {
     "Times New Roman",
     serif;
 
-    font-size:50px;
+    font-size:45px;
 
     font-weight:bold;
 
@@ -175,7 +205,10 @@ body {
 
 
 
-/* ================= TV OPTIMIZATION ================= */
+/* =========================================================
+   TV LARGE SCREEN
+   ========================================================= */
+
 
 @media (min-width:1800px) {
 
@@ -186,12 +219,13 @@ body {
 
 
     #temperature {
-        font-size:50px;
+        font-size:70px;
     }
 
 
     #wind {
-        font-size:50px;
+        font-size:45px;
     }
+
 
 }
