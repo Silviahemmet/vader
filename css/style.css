@@ -1,11 +1,3 @@
-/* =====================================
-   Silviahemmet Dashboard
-   Clean CSS - master1.png version
-===================================== */
-
-
-/* Grund */
-
 html,
 body {
     margin:0;
@@ -14,11 +6,8 @@ body {
     height:100%;
     overflow:hidden;
     background:#062f68;
-    font-family:Arial, sans-serif;
 }
 
-
-/* Hela dashboarden */
 
 .dashboard {
 
@@ -28,13 +17,12 @@ body {
     height:100vh;
 
     display:flex;
-    justify-content:center;
     align-items:center;
+    justify-content:center;
 
 }
 
 
-/* Masterbild */
 
 .master {
 
@@ -42,30 +30,16 @@ body {
     height:100%;
 
     object-fit:contain;
+
     display:block;
 
 }
 
 
 
-/* =====================================
-   LIVE DATA LAGER
-===================================== */
-
-
-.window {
-
-    position:absolute;
-    background:transparent;
-    z-index:20;
-
-}
-
-
-
-/* =====================================
-   KLOCKA
-===================================== */
+/* =========================
+   LIVE KLOCKA
+========================= */
 
 
 .clock-window {
@@ -75,15 +49,22 @@ body {
     top:4%;
     left:8%;
 
-    width:25%;
-    height:12%;
+    width:auto;
+    height:auto;
+
+    background:none !important;
+
+    z-index:20;
 
 }
+
 
 
 #clock {
 
     color:white;
+
+    background:none !important;
 
     font-size:5vw;
 
@@ -91,17 +72,13 @@ body {
 
     font-family:Georgia, serif;
 
-    line-height:1;
-
-    white-space:nowrap;
-
 }
 
 
 
-/* =====================================
+/* =========================
    TEMPERATUR
-===================================== */
+========================= */
 
 
 .temp-window {
@@ -109,19 +86,20 @@ body {
     position:absolute;
 
     top:22%;
-    left:21%;
+    left:22%;
 
-    width:20%;
-    height:10%;
+    background:none !important;
+
+    z-index:20;
 
 }
 
 
-
 #temperature {
 
-
     color:white;
+
+    background:none !important;
 
     font-size:4vw;
 
@@ -129,82 +107,53 @@ body {
 
     font-family:Georgia, serif;
 
-    white-space:nowrap;
-
 }
 
 
 
-/* =====================================
+/* =========================
    VIND
-===================================== */
+========================= */
 
 
 .wind-window {
 
-
     position:absolute;
 
     top:39%;
+    left:23%;
 
-    left:22%;
+    background:none !important;
 
-    width:25%;
-
-    height:8%;
+    z-index:20;
 
 }
 
 
-
 #wind {
 
-
     color:white;
+
+    background:none !important;
 
     font-size:2vw;
 
     font-weight:bold;
 
-    font-family:Arial, sans-serif;
-
 }
 
 
 
-/* =====================================
-   DÖLJ GAMLA LAGER
-===================================== */
-
+/* TA BORT ALLA GAMLA RUTOR */
 
 .mask,
 .clock-mask,
 .temp-mask,
-.wind-mask {
-
-
-    display:none !important;
-
-}
-
-
-
-/* =====================================
-   Extra säkerhet:
-   inga gamla bakgrunder
-===================================== */
-
-
-#clock,
-#temperature,
-#wind {
-
+.wind-mask,
+.window {
 
     background:transparent !important;
 
-    border:none !important;
-
     box-shadow:none !important;
-
 
 }
