@@ -1,113 +1,78 @@
 html, body {
-
     margin:0;
     padding:0;
     width:100%;
     height:100%;
     overflow:hidden;
     background:#062f68;
-
 }
 
 
 .dashboard {
-
     position:relative;
     width:100vw;
     height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
 }
 
 
 .master {
-
     position:absolute;
     width:100%;
     height:100%;
     object-fit:contain;
-    z-index:1;
-
+    left:0;
+    top:0;
 }
 
 
-/* =========================
-   LIVE KLOCKA
-========================= */
-
+/* KLOCKA */
 
 .clock-window {
-
     position:absolute;
-    z-index:10;
-
-    top:12%;
-    left:9%;
-
+    left:8%;
+    top:8%;
+    z-index:20;
 }
 
 
 #clock {
-
     color:white;
-    font-size:80px;
+    font-size:90px;
     font-weight:bold;
-    font-family:Arial, sans-serif;
-
 }
 
 
 
-/* =========================
-   TEMPERATUR
-========================= */
-
+/* TEMPERATUR */
 
 .temp-window {
-
     position:absolute;
-    z-index:10;
-
-    top:31%;
     left:10%;
-
+    top:30%;
+    z-index:20;
 }
 
 
 #temperature {
-
     color:white;
-    font-size:65px;
+    font-size:70px;
     font-weight:bold;
-    font-family:Arial, sans-serif;
-
 }
 
 
 
-/* =========================
-   VIND
-========================= */
-
+/* VIND */
 
 .wind-window {
-
     position:absolute;
-    z-index:10;
-
-    top:44%;
     left:10%;
-
+    top:45%;
+    z-index:20;
 }
 
 
 #wind {
-
     color:white;
-    font-size:35px;
+    font-size:40px;
     font-weight:bold;
-    font-family:Arial, sans-serif;
-
 }
