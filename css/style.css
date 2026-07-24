@@ -1,13 +1,14 @@
-/* =========================================
+/* =====================================
    Silviahemmet Dashboard
-   Master2 version
-========================================= */
+   Master2.png layout
+   Clean CSS version
+===================================== */
 
 
-/* RESET */
+/* Grund */
 
 * {
-    box-sizing:border-box;
+    box-sizing: border-box;
 }
 
 
@@ -22,18 +23,17 @@ body {
 
     overflow:hidden;
 
-    background:#173b78;
+    background:#12346b;
 
-    font-family:Georgia, serif;
+    font-family:
+    "Segoe UI",
+    Arial,
+    sans-serif;
 
 }
 
 
-
-/* =========================================
-   Dashboard
-========================================= */
-
+/* Dashboard */
 
 .dashboard {
 
@@ -42,83 +42,105 @@ body {
     width:100vw;
     height:100vh;
 
-    overflow:hidden;
-
 }
 
 
 
-/* =========================================
-   MASTER BAKGRUND
-========================================= */
-
+/* Masterbild */
 
 .master {
 
     position:absolute;
 
-    left:0;
-    top:0;
-
     width:100%;
     height:100%;
 
-    object-fit:fill;
+    object-fit:cover;
 
-    z-index:1;
+    top:0;
+    left:0;
 
 }
 
 
 
-/* =========================================
+/* =====================================
    KLOCKA
-   vänstra blå rutan
-========================================= */
+===================================== */
 
 
 .clock-window {
 
     position:absolute;
 
-    left:23%;
-    top:22%;
 
-    z-index:10;
+    /*
+      vänstra informationsrutan
+    */
+
+    left:2.5%;
+    top:12%;
+
+
+    width:22%;
+    height:18%;
+
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
 
 }
-
 
 
 #clock {
 
+
     color:white;
 
-    font-size:85px;
+
+    font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+
+    font-size:clamp(70px,5vw,110px);
+
 
     font-weight:bold;
 
-    line-height:1;
 
     letter-spacing:2px;
+
 
 }
 
 
 
-/* =========================================
+
+/* =====================================
    TEMPERATUR
-========================================= */
+===================================== */
 
 
 .temp-window {
 
+
     position:absolute;
 
-    left:24%;
-    top:43%;
 
-    z-index:10;
+    left:4%;
+    top:31%;
+
+
+    width:20%;
+
+
+    text-align:left;
+
 
 }
 
@@ -126,31 +148,45 @@ body {
 
 #temperature {
 
+
     color:white;
 
-    font-size:65px;
+
+    font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+
+    font-size:clamp(55px,4vw,85px);
+
 
     font-weight:bold;
 
-    line-height:1;
 
 }
 
 
 
-/* =========================================
+
+
+/* =====================================
    VIND
-========================================= */
+===================================== */
 
 
 .wind-window {
 
+
     position:absolute;
 
-    left:24%;
-    top:54%;
 
-    z-index:10;
+    left:4%;
+    top:43%;
+
+
+    width:25%;
+
 
 }
 
@@ -158,42 +194,47 @@ body {
 
 #wind {
 
+
     color:white;
 
-    font-size:32px;
+
+    font-size:clamp(25px,2vw,45px);
+
 
     font-weight:bold;
+
 
 }
 
 
 
-/* =========================================
-   TV / 4K
-========================================= */
+/* =====================================
+   Mobil / små skärmar
+===================================== */
 
 
-@media(min-width:1600px) {
+@media(max-width:1000px){
 
 
     #clock {
 
-        font-size:95px;
+        font-size:60px;
 
     }
 
 
     #temperature {
 
-        font-size:75px;
+        font-size:45px;
 
     }
 
 
     #wind {
 
-        font-size:38px;
+        font-size:25px;
 
     }
+
 
 }
