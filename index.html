@@ -1,114 +1,75 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
+
 <meta charset="UTF-8">
-<title>Silviahemmet Dashboard FINAL</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Silviahemmet Dashboard</title>
+
 <link rel="stylesheet" href="css/style.css">
+
 </head>
+
 
 <body>
 
+
 <div class="dashboard">
 
-<img class="master" src="assets/master1.png">
+
+    <!-- BAKGRUNDSBILD -->
+
+    <img 
+    class="master" 
+    src="assets/master1.png"
+    alt="Silviahemmet">
+
+
+    <!-- LIVE KLOCKA -->
+
+    <div class="clock-window">
+
+        <div id="clock">
+            --:--
+        </div>
+
+    </div>
 
 
 
+    <!-- LIVE TEMPERATUR -->
+
+    <div class="temp-window">
+
+        <div id="temperature">
+            --°
+        </div>
+
+    </div>
 
 
-<!-- LIVEVÄRDEN -->
-<div class="clock-window">
-    <div id="clock"></div>
-</div>
 
+    <!-- LIVE VIND -->
 
-<div class="temp-window">
-    <div id="temperature"></div>
-</div>
+    <div class="wind-window">
 
+        <div id="wind">
+            Vind -- km/h
+        </div>
 
-<div class="wind-window">
-    <div id="wind"></div>
-</div>
+    </div>
 
-
-</div>
-<div class="clock-mask"></div>
-<div class="temp-mask"></div>
-<div class="wind-mask"></div>
-        <!-- MASKER FÖR GAMLA STATISKA VÄRDEN -->
-
-<div class="mask clock-mask"></div>
-
-<div class="mask temp-mask"></div>
-
-<div class="mask wind-mask"></div>
-    alt="Silviahemmet masterdesign">
-<!-- Dynamiska fönster ovanpå MASTER -->
-
-<div class="window clock-window">
-    <div id="clock"></div>
-</div>
-
-<div class="window temp-window">
-    <div id="temperature"></div>
-</div>
-
-<div class="window wind-window">
-    <div id="wind"></div>
-</div>
-
-    <!-- FUNKTIONSLAGER -->
-    
-    <div id="clock"></div>
-
-    <div id="temperature"></div>
-
-    <div id="wind"></div>
 
 
 </div>
 
 
-<script src="js/app.js"></script>
+
+<script src="js/script.js"></script>
+
 
 </body>
+
 </html>
-.clock-mask {
-position:absolute;
-top:3%;
-left:8%;
-width:28%;
-height:13%;
-background:#062f68;
-z-index:15;
-}
-
-
-.temp-mask {
-position:absolute;
-top:22%;
-left:44%;
-width:22%;
-height:15%;
-background:#2d72b8;
-z-index:15;
-}
-
-
-.wind-mask {
-position:absolute;
-top:38%;
-left:44%;
-width:25%;
-height:10%;
-background:#2d72b8;
-z-index:15;
-}
-
-
-#clock,
-#temperature,
-#wind {
-z-index:20;
-}
