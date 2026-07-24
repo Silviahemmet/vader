@@ -1,10 +1,10 @@
 /* ======================================
    Silviahemmet Dashboard
-   Master2.png FINAL CSS
+   Master2 FINAL CSS
    ====================================== */
 
 
-/* RESET */
+/* Grund */
 
 * {
     margin:0;
@@ -21,22 +21,21 @@ body {
 
     overflow:hidden;
 
-    background:#073477;
+    background:#0b2d6b;
+
+    font-family: Georgia, "Times New Roman", serif;
 
 }
 
 
-/* ======================================
-   HUVUDKONTAINER
-   ====================================== */
 
+/* Hela skärmen */
 
 .dashboard {
 
     position:relative;
 
     width:100vw;
-
     height:100vh;
 
     overflow:hidden;
@@ -45,28 +44,22 @@ body {
 
 
 
-/* ======================================
-   MASTERBILD
-   Behåller original proportioner
-   ====================================== */
-
+/* MASTER BILD
+   Rör inte storleken */
 
 .master {
 
     position:absolute;
 
     top:0;
-
     left:0;
 
+    width:100%;
+    height:100%;
 
-    width:100vw;
+    object-fit:contain;
 
-    height:100vh;
-
-
-    object-fit:fill;
-
+    z-index:1;
 
 }
 
@@ -74,65 +67,35 @@ body {
 
 /* ======================================
    KLOCKA
-   Placering vid grenen
    ====================================== */
 
 
 .clock-window {
 
-
     position:absolute;
 
+    z-index:5;
 
+
+    /* placering */
     top:20px;
-
-
     left:230px;
-
-
-
-    width:380px;
-
-    height:120px;
-
-
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
 
 
 }
 
 
-
 #clock {
-
 
     color:white;
 
-
-    font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-
-
     font-size:110px;
-
 
     font-weight:bold;
 
-
     line-height:1;
 
-
     letter-spacing:2px;
-
-
 
 }
 
@@ -145,32 +108,13 @@ body {
 
 .temp-window {
 
-
     position:absolute;
+
+    z-index:5;
 
 
     left:430px;
-
-
     top:205px;
-
-
-
-    width:260px;
-
-
-    height:100px;
-
-
-
-    display:flex;
-
-
-    justify-content:center;
-
-
-    align-items:center;
-
 
 
 }
@@ -179,28 +123,13 @@ body {
 
 #temperature {
 
-
     color:white;
 
-
-    font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-
-
-    font-size:72px;
-
+    font-size:70px;
 
     font-weight:bold;
 
-
-    line-height:1;
-
-
-
 }
-
 
 
 
@@ -211,121 +140,57 @@ body {
 
 .wind-window {
 
-
     position:absolute;
+
+    z-index:5;
 
 
     left:440px;
-
-
     top:300px;
-
-
-
-    width:300px;
-
-
-    height:70px;
-
-
-
-    display:flex;
-
-
-    justify-content:center;
-
-
-    align-items:center;
-
 
 
 }
 
 
-
 #wind {
-
 
     color:white;
 
-
-    font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-
-
-    font-size:42px;
-
+    font-size:38px;
 
     font-weight:bold;
-
 
 }
 
 
 
 /* ======================================
-   4K / STORA TV-SKÄRMAR
+   TV / 4K Anpassning
    ====================================== */
 
 
-@media (min-width:3000px){
+@media (min-width:2000px) {
 
 
+    #clock {
 
-.clock-window {
+        font-size:150px;
 
-    left:300px;
-
-    top:25px;
-
-}
+    }
 
 
+    #temperature {
 
-#clock {
+        font-size:90px;
 
-    font-size:140px;
-
-}
-
+    }
 
 
-.temp-window {
+    #wind {
 
-    left:550px;
+        font-size:50px;
 
-    top:260px;
-
-}
-
-
-
-#temperature {
-
-    font-size:90px;
-
-}
-
-
-
-.wind-window {
-
-    left:560px;
-
-    top:380px;
-
-}
-
-
-
-#wind {
-
-    font-size:55px;
-
-}
-
+    }
 
 
 }
