@@ -1,97 +1,125 @@
+/* ======================================
+   Silviahemmet Dashboard
+   Step 12.6 - Clean Overlay CSS
+   ====================================== */
+
 html, body {
-    margin:0;
-    padding:0;
-    width:100%;
-    height:100%;
-    overflow:hidden;
-    background:#062f68;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #062f68;
 }
+
+
+/* Huvudbehållare */
 
 .dashboard {
-    position:relative;
-    width:100vw;
-    height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+
+/* MASTER bilden */
+
 .master {
-    width:100%;
-    height:100%;
-    object-fit:contain;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
 }
 
 
 /* Alla live-fönster */
 
 .window {
-    position:absolute;
-    overflow:hidden;
-    background:transparent;
-    z-index:10;
+    position: absolute;
+    z-index: 10;
+    background: transparent;
+    pointer-events: none;
 }
 
 
-/* KLOCKA */
+/* =========================
+   KLOCKA
+   ========================= */
 
 .clock-window {
-    top:3%;
-    left:7%;
-    width:25%;
-    height:13%;
+    top: 4%;
+    left: 7%;
+    width: 30%;
+    height: 12%;
 }
+
 
 #clock {
-    width:100%;
-    height:100%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:white;
-    font-size:5vw;
-    font-weight:bold;
-    white-space:nowrap;
+    color: white;
+    font-size: 5vw;
+    font-weight: bold;
+    white-space: nowrap;
 }
 
 
-/* TEMPERATUR */
+/* =========================
+   TEMPERATUR
+   ========================= */
 
 .temp-window {
-    top:22%;
-    left:20%;
-    width:25%;
-    height:12%;
+    top: 22%;
+    left: 20%;
+    width: 25%;
+    height: 12%;
 }
+
 
 #temperature {
-    color:white;
-    font-size:4vw;
-    font-weight:bold;
+    color: white;
+    font-size: 4vw;
+    font-weight: bold;
 }
 
 
-/* VIND */
+/* =========================
+   VIND
+   ========================= */
 
 .wind-window {
-    top:39%;
-    left:22%;
-    width:30%;
-    height:8%;
+    top: 39%;
+    left: 22%;
+    width: 30%;
+    height: 8%;
 }
+
 
 #wind {
-    color:white;
-    font-size:2vw;
+    color: white;
+    font-size: 2vw;
+    font-weight: bold;
 }
 
 
-/* Ingena bakgrunder på live-lager */
+/* =========================
+   Extra live-text
+   ========================= */
+
+#weather-description {
+    color: white;
+    font-size: 2vw;
+}
+
+
+/* Ingen bakgrund på live-data */
 
 #clock,
 #temperature,
-#wind {
-    background:transparent;
-    border:none;
-    box-shadow:none;
+#wind,
+#weather-description {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
 }
