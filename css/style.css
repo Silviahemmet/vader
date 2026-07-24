@@ -1,7 +1,7 @@
 /* =========================================================
    SILVIAHEMMET DASHBOARD - MASTER2
-   65" TV / 16:9 VERSION
-   ========================================================= */
+   65" TV / WEATHER BOX VERSION
+========================================================= */
 
 
 /* RESET */
@@ -28,8 +28,8 @@ body {
 
 
 /* =========================================================
-   MAIN DASHBOARD
-   ========================================================= */
+   DASHBOARD
+========================================================= */
 
 
 .dashboard {
@@ -46,8 +46,8 @@ body {
 
 
 /* =========================================================
-   MASTER IMAGE BACKGROUND
-   ========================================================= */
+   MASTER IMAGE
+========================================================= */
 
 
 .master {
@@ -70,8 +70,7 @@ body {
 
 /* =========================================================
    CLOCK
-   Move it by changing left/top only
-   ========================================================= */
+========================================================= */
 
 
 .clock-window {
@@ -86,15 +85,11 @@ body {
 }
 
 
-
 #clock {
 
     color:white;
 
-    font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+    font-family:Georgia, "Times New Roman", serif;
 
     font-size:50px;
 
@@ -111,22 +106,27 @@ body {
 
 
 /* =========================================================
-   WEATHER GROUP
-   Change these two numbers to move ALL weather
-   ========================================================= */
+   WEATHER BOX
+   Fits inside left panel
+========================================================= */
 
 
 .temp-window {
 
     position:absolute;
 
-    left:430px;
-    top:220px;
+    left:380px;
 
-    width:450px;
-    height:250px;
+    top:210px;
+
+
+    width:350px;
+
+    height:260px;
+
 
     z-index:10;
+
 
     display:flex;
 
@@ -142,17 +142,13 @@ body {
 
 /* TEMPERATURE */
 
-
 #temperature {
 
     color:white;
 
-    font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+    font-family:Georgia, "Times New Roman", serif;
 
-    font-size:70px;
+    font-size:75px;
 
     font-weight:bold;
 
@@ -166,17 +162,20 @@ body {
 
 /* WIND */
 
-
 .wind-window {
 
     position:absolute;
 
-    left:430px;
-    top:350px;
+    left:380px;
 
-    width:450px;
+    top:360px;
+
+
+    width:350px;
+
 
     z-index:10;
+
 
     text-align:center;
 
@@ -188,16 +187,11 @@ body {
 
     color:white;
 
-    font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+    font-family:Georgia, "Times New Roman", serif;
 
-    font-size:45px;
+    font-size:35px;
 
     font-weight:bold;
-
-    line-height:1;
 
     white-space:nowrap;
 
@@ -206,8 +200,8 @@ body {
 
 
 /* =========================================================
-   TV LARGE SCREEN
-   ========================================================= */
+   TV
+========================================================= */
 
 
 @media (min-width:1800px) {
@@ -219,13 +213,12 @@ body {
 
 
     #temperature {
-        font-size:70px;
+        font-size:75px;
     }
 
 
     #wind {
-        font-size:45px;
+        font-size:35px;
     }
-
 
 }
