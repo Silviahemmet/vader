@@ -3,7 +3,15 @@
    65" TV / 16:9 VERSION
    ========================================================= */
 
+.temp-window {
+    background:red !important;
+    border:10px solid yellow !important;
+}
 
+.wind-window {
+    background:blue !important;
+    border:10px solid green !important;
+}
 * {
     margin:0;
     padding:0;
