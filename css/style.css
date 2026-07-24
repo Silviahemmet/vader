@@ -4,8 +4,6 @@
    ========================================================= */
 
 
-/* RESET */
-
 * {
     margin:0;
     padding:0;
@@ -27,11 +25,6 @@ body {
 
 
 
-/* =========================================================
-   DASHBOARD
-   ========================================================= */
-
-
 .dashboard {
 
     position:relative;
@@ -43,11 +36,6 @@ body {
 
 }
 
-
-
-/* =========================================================
-   MASTER IMAGE
-   ========================================================= */
 
 
 .master {
@@ -68,9 +56,7 @@ body {
 
 
 
-/* =========================================================
-   CLOCK
-   ========================================================= */
+/* ================= CLOCK ================= */
 
 
 .clock-window {
@@ -91,28 +77,19 @@ body {
 
     color:white;
 
-    font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+    font-family:Georgia,"Times New Roman",serif;
 
     font-size:50px;
 
     font-weight:bold;
 
-    line-height:1;
-
     white-space:nowrap;
-
-    font-variant-numeric:tabular-nums;
 
 }
 
 
 
-/* =========================================================
-   TEMPERATURE
-   ========================================================= */
+/* ================= TEMPERATURE ================= */
 
 
 .temp-window {
@@ -122,7 +99,7 @@ body {
     left:0;
     top:0;
 
-    transform:translate(480px,0px);
+    transform:translate(480px,210px);
 
     z-index:10;
 
@@ -133,16 +110,11 @@ body {
 
     color:white;
 
-    font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+    font-family:Georgia,"Times New Roman",serif;
 
-    font-size:30px;
+    font-size:50px;
 
     font-weight:bold;
-
-    line-height:1;
 
     white-space:nowrap;
 
@@ -150,9 +122,7 @@ body {
 
 
 
-/* =========================================================
-   WIND
-   ========================================================= */
+/* ================= WIND ================= */
 
 
 .wind-window {
@@ -162,7 +132,7 @@ body {
     left:0;
     top:0;
 
-    transform:translate(490px,0px);
+    transform:translate(480px,300px);
 
     z-index:10;
 
@@ -173,49 +143,12 @@ body {
 
     color:white;
 
-    font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+    font-family:Georgia,"Times New Roman",serif;
 
-    font-size:20px;
+    font-size:50px;
 
     font-weight:bold;
 
-    line-height:1;
-
     white-space:nowrap;
-
-}
-
-
-
-/* =========================================================
-   TV OPTIMIZATION
-   ========================================================= */
-
-
-@media (min-width:1800px) {
-
-
-    #clock {
-
-        font-size:50px;
-
-    }
-
-
-    #temperature {
-
-        font-size:30px;
-
-    }
-
-
-    #wind {
-
-        font-size:20px;
-
-    }
 
 }
