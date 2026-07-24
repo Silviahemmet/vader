@@ -57,12 +57,14 @@ body {
     left:0;
     top:0;
 
-    width:100%;
-    height:100%;
+    width:100vw;
+    height:100vh;
 
-    object-fit:contain;
+    object-fit:fill;
 
     z-index:1;
+
+}
 
 }
 
@@ -121,10 +123,8 @@ body {
 
     position:absolute;
 
-    left:0;
-    top:0;
-
-    transform:translate(400px,220px);
+    left:460px;
+    top:250px;
 
     width:300px;
 
@@ -133,46 +133,30 @@ body {
     text-align:center;
 
 }
-
-
-
-/* Temperature */
 
 
 #temperature {
 
     color:white;
 
-    font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+    font-family:Georgia,"Times New Roman",serif;
 
     font-size:55px;
 
     font-weight:bold;
 
-    line-height:1;
-
-    white-space:nowrap;
-
 }
 
-
-
-/* Wind position */
 
 
 .wind-window {
 
     position:absolute;
 
-    left:0;
-    top:0;
+    left:430px;
+    top:340px;
 
-    transform:translate(400px,315px);
-
-    width:300px;
+    width:350px;
 
     z-index:10;
 
@@ -181,30 +165,17 @@ body {
 }
 
 
-
-/* Wind */
-
-
 #wind {
 
     color:white;
 
-    font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+    font-family:Georgia,"Times New Roman",serif;
 
-    font-size:28px;
+    font-size:30px;
 
     font-weight:bold;
 
-    line-height:1;
-
-    white-space:nowrap;
-
 }
-
-
 
 /* =========================================================
    TV LARGE SCREEN
