@@ -3,7 +3,6 @@
 // Steg 12.3 - Open-Meteo + Clock
 // MASTER design remains untouched
 // ======================================
-alert("JS fungerar!");
 function updateClock() {
     const now = new Date();
 
