@@ -85,28 +85,36 @@ body {
     white-space:nowrap;
 
 }
-
-
-
-/* ================= TEMPERATURE ================= */
+/* ===============================
+   TEMPERATURE POSITION
+   =============================== */
 
 .temp-window {
 
     position:absolute;
 
-    left:520px;
-    top:210px;
+    left:0;
+    top:0;
+
+    transform:translate(520px,210px);
 
     z-index:10;
 
 }
 
+
+/* ===============================
+   TEMPERATURE TEXT
+   =============================== */
 
 #temperature {
 
     color:white;
 
-    font-family:Georgia,"Times New Roman",serif;
+    font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
 
     font-size:50px;
 
@@ -120,25 +128,36 @@ body {
 
 
 
-/* ================= WIND ================= */
+/* ===============================
+   WIND POSITION
+   =============================== */
 
 .wind-window {
 
     position:absolute;
 
-    left:520px;
-    top:300px;
+    left:0;
+    top:0;
+
+    transform:translate(520px,300px);
 
     z-index:10;
 
 }
 
 
+/* ===============================
+   WIND TEXT
+   =============================== */
+
 #wind {
 
     color:white;
 
-    font-family:Georgia,"Times New Roman",serif;
+    font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
 
     font-size:50px;
 
@@ -147,5 +166,12 @@ body {
     line-height:1;
 
     white-space:nowrap;
+
+}
+
+
+
+
+
 
 }
