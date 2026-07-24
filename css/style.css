@@ -1,10 +1,18 @@
-/* =====================================
+/* =========================================
    Silviahemmet Dashboard
-   Master2 + Live data
-===================================== */
+   Master2 layout
+========================================= */
 
 
-html, body {
+/* Grund */
+
+* {
+    box-sizing: border-box;
+}
+
+
+html,
+body {
 
     margin:0;
     padding:0;
@@ -14,13 +22,18 @@ html, body {
 
     overflow:hidden;
 
-    background:#062f68;
+    background:#173b78;
+
+    font-family:Georgia, serif;
 
 }
 
 
 
-/* Huvudcontainer */
+/* =========================================
+   Dashboard container
+========================================= */
+
 
 .dashboard {
 
@@ -29,23 +42,28 @@ html, body {
     width:100vw;
     height:100vh;
 
+    overflow:hidden;
+
 }
 
 
 
-/* Bakgrundsbild */
+/* =========================================
+   MASTER BILD
+========================================= */
+
 
 .master {
 
     position:absolute;
 
-    left:0;
-    top:0;
-
     width:100%;
     height:100%;
 
     object-fit:contain;
+
+    left:0;
+    top:0;
 
     z-index:1;
 
@@ -53,61 +71,64 @@ html, body {
 
 
 
-/* =====================================
+/* =========================================
    LIVE KLOCKA
-===================================== */
+   vänster blå ruta
+========================================= */
 
 
 .clock-window {
 
     position:absolute;
 
-    left:13%;
-    top:11%;
+    left:25.5%;
+    top:21%;
 
-    z-index:20;
+    z-index:10;
 
 }
 
 
+
 #clock {
+
 
     color:white;
 
-    font-family:Arial, sans-serif;
-
-    font-size:85px;
+    font-size:95px;
 
     font-weight:bold;
 
     line-height:1;
 
+    letter-spacing:2px;
+
 }
 
 
 
-/* =====================================
-   LIVE TEMPERATUR
-===================================== */
+/* =========================================
+   TEMPERATUR
+========================================= */
 
 
 .temp-window {
 
     position:absolute;
 
-    left:11%;
-    top:31%;
+    left:27%;
+    top:42%;
 
-    z-index:20;
+    z-index:10;
 
 }
 
 
+
 #temperature {
 
-    color:white;
 
-    font-family:Arial, sans-serif;
+    color:white;
 
     font-size:70px;
 
@@ -119,33 +140,63 @@ html, body {
 
 
 
-/* =====================================
-   LIVE VIND
-===================================== */
+/* =========================================
+   VIND
+========================================= */
 
 
 .wind-window {
 
     position:absolute;
 
-    left:11%;
-    top:43%;
+    left:27%;
+    top:54%;
 
-    z-index:20;
+    z-index:10;
 
 }
 
 
+
 #wind {
 
-    color:white;
 
-    font-family:Arial, sans-serif;
+    color:white;
 
     font-size:35px;
 
     font-weight:bold;
 
-    line-height:1;
+}
+
+
+
+/* =========================================
+   Anpassning för stora TV-skärmar
+========================================= */
+
+
+@media (min-width:1600px) {
+
+
+    #clock {
+
+        font-size:120px;
+
+    }
+
+
+    #temperature {
+
+        font-size:85px;
+
+    }
+
+
+    #wind {
+
+        font-size:42px;
+
+    }
 
 }
