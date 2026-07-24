@@ -1,10 +1,19 @@
 /* =====================================
    Silviahemmet Dashboard
-   Master2 + Live data
+   Master2.png FINAL BASE
+   TV 55-65"
 ===================================== */
 
 
-html, body {
+/* RESET */
+
+* {
+    box-sizing:border-box;
+}
+
+
+html,
+body {
 
     margin:0;
     padding:0;
@@ -14,13 +23,21 @@ html, body {
 
     overflow:hidden;
 
-    background:#062f68;
+    background:#12346b;
+
+    font-family:
+    "Segoe UI",
+    Arial,
+    sans-serif;
 
 }
 
 
 
-/* Huvudcontainer */
+/* =====================================
+   HUVUDCONTAINER
+===================================== */
+
 
 .dashboard {
 
@@ -29,11 +46,16 @@ html, body {
     width:100vw;
     height:100vh;
 
+    overflow:hidden;
+
 }
 
 
 
-/* Bakgrundsbild */
+/* =====================================
+   MASTER BILD
+===================================== */
+
 
 .master {
 
@@ -42,110 +64,189 @@ html, body {
     left:0;
     top:0;
 
+
     width:100%;
     height:100%;
 
-    object-fit:contain;
 
-    z-index:1;
+    object-fit:cover;
+
 
 }
 
 
 
 /* =====================================
-   LIVE KLOCKA
+   KLOCKA
 ===================================== */
 
 
 .clock-window {
 
+
     position:absolute;
 
-    left:13%;
-    top:11%;
 
-    z-index:20;
+    /* vänstra blå panelen */
+
+    left:3.8%;
+
+    top:17%;
+
+
+    width:30%;
+
+    height:15%;
+
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
 
 }
+
 
 
 #clock {
 
+
     color:white;
 
-    font-family:Arial, sans-serif;
 
-    font-size:85px;
+    font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+
+    font-size:clamp(65px,5vw,100px);
+
 
     font-weight:bold;
 
-    line-height:1;
+
+    letter-spacing:2px;
+
 
 }
 
 
 
+
 /* =====================================
-   LIVE TEMPERATUR
+   TEMPERATUR
 ===================================== */
 
 
 .temp-window {
 
+
     position:absolute;
 
-    left:11%;
-    top:31%;
 
-    z-index:20;
+    left:5%;
+
+
+    top:36%;
+
+
+    width:25%;
+
 
 }
 
 
+
 #temperature {
+
 
     color:white;
 
-    font-family:Arial, sans-serif;
 
-    font-size:70px;
+    font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+
+    font-size:clamp(55px,4vw,80px);
+
 
     font-weight:bold;
 
-    line-height:1;
+
+}
+
+
+
+
+/* =====================================
+   VIND
+===================================== */
+
+
+.wind-window {
+
+
+    position:absolute;
+
+
+    left:5%;
+
+
+    top:47%;
+
+
+}
+
+
+
+#wind {
+
+
+    color:white;
+
+
+    font-size:clamp(25px,2vw,40px);
+
+
+    font-weight:600;
+
 
 }
 
 
 
 /* =====================================
-   LIVE VIND
+   STORA TV-SKÄRMAR
 ===================================== */
 
 
-.wind-window {
-
-    position:absolute;
-
-    left:11%;
-    top:43%;
-
-    z-index:20;
-
-}
+@media(min-width:1600px){
 
 
-#wind {
+    #clock {
 
-    color:white;
+        font-size:100px;
 
-    font-family:Arial, sans-serif;
+    }
 
-    font-size:35px;
 
-    font-weight:bold;
+    #temperature {
 
-    line-height:1;
+        font-size:80px;
+
+    }
+
+
+    #wind {
+
+        font-size:40px;
+
+    }
+
 
 }
