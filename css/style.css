@@ -1,11 +1,14 @@
-/* ==========================================
-   SILVIAHEMMET DASHBOARD
-   65" FULLSCREEN
-   MASTER2 IMAGE BASE
-========================================== */
+/* =========================================================
+   SILVIAHEMMET DASHBOARD - MASTER2
+   65" TV / 16:9 VERSION
+   ========================================================= */
 
+
+/* RESET */
 
 * {
+    margin:0;
+    padding:0;
     box-sizing:border-box;
 }
 
@@ -13,23 +16,20 @@
 html,
 body {
 
-    margin:0;
-    padding:0;
-
     width:100%;
     height:100%;
 
     overflow:hidden;
 
-    background:#123879;
+    background:#06255f;
 
 }
 
 
 
-/* ==========================================
-   DASHBOARD CANVAS
-========================================== */
+/* =========================================================
+   MAIN DASHBOARD
+   ========================================================= */
 
 
 .dashboard {
@@ -45,9 +45,9 @@ body {
 
 
 
-/* ==========================================
+/* =========================================================
    MASTER IMAGE
-========================================== */
+   ========================================================= */
 
 
 .master {
@@ -62,77 +62,66 @@ body {
 
     object-fit:contain;
 
+    z-index:1;
+
 }
 
 
 
-/* ==========================================
+/* =========================================================
    CLOCK
-========================================== */
+   ========================================================= */
 
 
 .clock-window {
 
     position:absolute;
 
-
-    /* position from your Master2 image */
-
     left:230px;
-
-    top:35px;
-
+    top:20px;
 
     z-index:10;
 
 }
-
 
 
 #clock {
 
-
     color:white;
 
+    font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
 
-    font-family:Georgia, "Times New Roman", serif;
-
-
-    font-size:110px;
-
+    font-size:100px;
 
     font-weight:bold;
 
-
     line-height:1;
 
+    white-space:nowrap;
 
 }
 
 
 
-/* ==========================================
+/* =========================================================
    TEMPERATURE
-========================================== */
+   ========================================================= */
 
 
 .temp-window {
 
-
     position:absolute;
 
+    left:430px;
 
-    left:420px;
-
-
-    top:195px;
-
+    top:185px;
 
     z-index:10;
 
-
 }
-
 
 
 #temperature {
@@ -140,45 +129,41 @@ body {
 
     color:white;
 
+    font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
 
-    font-family:Georgia, "Times New Roman", serif;
 
-
-    font-size:90px;
-
+    font-size:75px;
 
     font-weight:bold;
 
-
     line-height:1;
 
+    white-space:nowrap;
 
 }
 
 
 
-/* ==========================================
+/* =========================================================
    WIND
-========================================== */
+   ========================================================= */
 
 
 .wind-window {
 
-
     position:absolute;
-
 
     left:440px;
 
-
-    top:315px;
-
+    top:300px;
 
     z-index:10;
 
 
 }
-
 
 
 #wind {
@@ -187,10 +172,13 @@ body {
     color:white;
 
 
-    font-family:Georgia, "Times New Roman", serif;
+    font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
 
 
-    font-size:40px;
+    font-size:36px;
 
 
     font-weight:bold;
@@ -199,24 +187,38 @@ body {
     line-height:1;
 
 
+    white-space:nowrap;
+
+
 }
 
 
 
-/* ==========================================
-   TV FULLSCREEN SCALE
-========================================== */
+/* =========================================================
+   TV OPTIMIZATION
+   ========================================================= */
 
 
-@media (min-width:1920px) {
+@media (min-width:1800px) {
 
 
-    .dashboard {
+    #clock {
 
-        width:1920px;
-        height:1080px;
+        font-size:110px;
 
-        transform-origin:top left;
+    }
+
+
+    #temperature {
+
+        font-size:80px;
+
+    }
+
+
+    #wind {
+
+        font-size:40px;
 
     }
 
