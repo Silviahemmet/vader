@@ -1,78 +1,151 @@
+/* =====================================
+   Silviahemmet Dashboard
+   Master2 + Live data
+===================================== */
+
+
 html, body {
+
     margin:0;
     padding:0;
+
     width:100%;
     height:100%;
+
     overflow:hidden;
+
     background:#062f68;
+
 }
 
+
+
+/* Huvudcontainer */
 
 .dashboard {
+
     position:relative;
+
     width:100vw;
     height:100vh;
+
 }
 
+
+
+/* Bakgrundsbild */
 
 .master {
+
     position:absolute;
-    width:100%;
-    height:100%;
-    object-fit:contain;
+
     left:0;
     top:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:contain;
+
+    z-index:1;
+
 }
 
 
-/* KLOCKA */
+
+/* =====================================
+   LIVE KLOCKA
+===================================== */
+
 
 .clock-window {
+
     position:absolute;
-    left:8%;
-    top:8%;
+
+    left:13%;
+    top:11%;
+
     z-index:20;
+
 }
 
 
 #clock {
+
     color:white;
-    font-size:90px;
+
+    font-family:Arial, sans-serif;
+
+    font-size:85px;
+
     font-weight:bold;
+
+    line-height:1;
+
 }
 
 
 
-/* TEMPERATUR */
+/* =====================================
+   LIVE TEMPERATUR
+===================================== */
+
 
 .temp-window {
+
     position:absolute;
-    left:10%;
-    top:30%;
+
+    left:11%;
+    top:31%;
+
     z-index:20;
+
 }
 
 
 #temperature {
+
     color:white;
+
+    font-family:Arial, sans-serif;
+
     font-size:70px;
+
     font-weight:bold;
+
+    line-height:1;
+
 }
 
 
 
-/* VIND */
+/* =====================================
+   LIVE VIND
+===================================== */
+
 
 .wind-window {
+
     position:absolute;
-    left:10%;
-    top:45%;
+
+    left:11%;
+    top:43%;
+
     z-index:20;
+
 }
 
 
 #wind {
+
     color:white;
-    font-size:40px;
+
+    font-family:Arial, sans-serif;
+
+    font-size:35px;
+
     font-weight:bold;
+
+    line-height:1;
+
 }
