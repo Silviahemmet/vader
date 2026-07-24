@@ -26,138 +26,110 @@ html, body {
 }
 
 
-/* =========================
-   LIVE KLOCKA
-========================= */
+/* =====================
+ LIVE KLOCKA
+===================== */
 
 .clock-window {
+
     position:absolute;
+
     top:4%;
     left:8%;
+
     width:25%;
     height:12%;
-    z-index:20;
+
+    z-index:10;
 }
 
 
 #clock {
+
     color:white;
-    font-size:5vw;
+
+    font-size:4.8vw;
+
     font-weight:bold;
+
     white-space:nowrap;
+
 }
 
 
 
-/* =========================
-   LIVE TEMPERATUR
-========================= */
+/* =====================
+ LIVE TEMPERATUR
+===================== */
 
 .temp-window {
+
     position:absolute;
+
     top:23%;
-    left:45%;
-    width:20%;
+
+    left:44%;
+
+    width:18%;
+
     height:10%;
-    z-index:20;
+
+    z-index:10;
+
 }
 
 
 #temperature {
+
     color:white;
-    font-size:4vw;
+
+    font-size:3.5vw;
+
     font-weight:bold;
+
 }
 
 
 
-/* =========================
-   LIVE VIND
-========================= */
+/* =====================
+ LIVE VIND
+===================== */
 
 .wind-window {
+
     position:absolute;
-    top:39%;
-    left:45%;
-    width:25%;
+
+    top:40%;
+
+    left:44%;
+
+    width:20%;
+
     height:8%;
-    z-index:20;
+
+    z-index:10;
+
 }
 
 
 #wind {
+
     color:white;
+
     font-size:2vw;
+
     font-weight:bold;
+
 }
 
 
 
-/* =========================
-   MASKER
-   döljer MASTER-siffrorna
-========================= */
+/* ta bort gamla testmasker */
 
-
-.clock-mask {
-
-    position:absolute;
-
-    top:3%;
-    left:7%;
-
-    width:28%;
-    height:14%;
-
-    background:#0b326c;
-
-    z-index:15;
-}
-
-
-
-.temp-mask {
-
-    position:absolute;
-
-    top:22%;
-    left:43%;
-
-    width:24%;
-    height:14%;
-
-    background:#2d72b8;
-
-    z-index:15;
-}
-
-
-
+.clock-mask,
+.temp-mask,
 .wind-mask {
 
-    position:absolute;
-
-    top:38%;
-    left:43%;
-
-    width:28%;
-    height:10%;
-
-    background:#2d72b8;
-
-    z-index:15;
-}
-
-
-
-/* alltid genomskinliga livefält */
-
-#clock,
-#temperature,
-#wind {
-
-    background:none;
-    border:none;
-    box-shadow:none;
+    display:none;
 
 }
