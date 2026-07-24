@@ -8,8 +8,6 @@ html, body {
 }
 
 
-/* Huvudbehållare */
-
 .dashboard {
     position:relative;
     width:100vw;
@@ -20,29 +18,26 @@ html, body {
 }
 
 
-/* MASTER-BILD */
-
 .master {
     width:100%;
     height:100%;
     object-fit:contain;
-    display:block;
 }
 
 
 
-/* ===========================
-   LIVE KLOCKA
-=========================== */
+/* =====================
+   KLOCKA
+===================== */
 
 .clock-window {
 
     position:absolute;
 
     top:4%;
-    left:9%;
+    left:8%;
 
-    width:25%;
+    width:28%;
     height:12%;
 
     z-index:20;
@@ -54,7 +49,7 @@ html, body {
 
     color:white;
 
-    font-size:4.5vw;
+    font-size:4.2vw;
 
     font-weight:bold;
 
@@ -64,10 +59,9 @@ html, body {
 
 
 
-/* ===========================
-   LIVE TEMPERATUR
-=========================== */
-
+/* =====================
+   TEMPERATUR
+===================== */
 
 .temp-window {
 
@@ -75,7 +69,7 @@ html, body {
 
     top:25%;
 
-    left:45%;
+    left:46%;
 
     width:18%;
 
@@ -86,12 +80,11 @@ html, body {
 }
 
 
-
 #temperature {
 
     color:white;
 
-    font-size:4vw;
+    font-size:3.8vw;
 
     font-weight:bold;
 
@@ -99,10 +92,9 @@ html, body {
 
 
 
-/* ===========================
-   LIVE VIND
-=========================== */
-
+/* =====================
+   VIND
+===================== */
 
 .wind-window {
 
@@ -110,7 +102,7 @@ html, body {
 
     top:40%;
 
-    left:45%;
+    left:46%;
 
     width:20%;
 
@@ -119,7 +111,6 @@ html, body {
     z-index:20;
 
 }
-
 
 
 #wind {
@@ -134,17 +125,27 @@ html, body {
 
 
 
-/* ===========================
-   Ta bort konstiga bakgrunder
-=========================== */
+/* =====================
+   gamla siffror bort
+===================== */
 
+.clock-mask,
+.temp-mask,
+.wind-mask {
+
+    display:none;
+
+}
+
+
+/* rena live-fönster */
 
 #clock,
 #temperature,
 #wind {
 
-    background:transparent;
-
+    background:none;
     border:none;
+    box-shadow:none;
 
 }
