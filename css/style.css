@@ -1,19 +1,15 @@
 /* =====================================
    Silviahemmet Dashboard
-   Master2.png layout
-   Clean CSS version
+   Master2.png FINAL POSITION
 ===================================== */
 
 
-/* Grund */
-
 * {
-    box-sizing: border-box;
+    box-sizing:border-box;
 }
 
 
-html,
-body {
+html, body {
 
     margin:0;
     padding:0;
@@ -25,15 +21,11 @@ body {
 
     background:#12346b;
 
-    font-family:
-    "Segoe UI",
-    Arial,
-    sans-serif;
+    font-family:"Segoe UI", Arial, sans-serif;
 
 }
 
 
-/* Dashboard */
 
 .dashboard {
 
@@ -46,27 +38,25 @@ body {
 
 
 
-/* Masterbild */
 
 .master {
 
     position:absolute;
 
+    inset:0;
+
     width:100%;
     height:100%;
 
-    object-fit:cover;
-
-    top:0;
-    left:0;
+    object-fit:contain;
 
 }
 
 
 
-/* =====================================
-   KLOCKA
-===================================== */
+/* ===============================
+   CLOCK
+================================ */
 
 
 .clock-window {
@@ -74,25 +64,18 @@ body {
     position:absolute;
 
 
-    /*
-      vänstra informationsrutan
-    */
+    /* vänstra rutan */
 
-    left:2.5%;
-    top:12%;
+    left:3.5%;
+    top:18%;
 
 
-    width:22%;
+    width:30%;
     height:18%;
 
 
-    display:flex;
-
-    align-items:center;
-    justify-content:center;
-
-
 }
+
 
 
 #clock {
@@ -101,29 +84,25 @@ body {
     color:white;
 
 
-    font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+    font-family:Georgia, serif;
 
 
-    font-size:clamp(70px,5vw,110px);
+    font-size:clamp(55px,4vw,90px);
 
 
     font-weight:bold;
 
 
-    letter-spacing:2px;
+    text-align:center;
 
 
 }
 
 
 
-
-/* =====================================
-   TEMPERATUR
-===================================== */
+/* ===============================
+   TEMPERATURE
+================================ */
 
 
 .temp-window {
@@ -132,14 +111,11 @@ body {
     position:absolute;
 
 
-    left:4%;
-    top:31%;
+    left:5%;
+    top:36%;
 
 
-    width:20%;
-
-
-    text-align:left;
+    width:25%;
 
 
 }
@@ -152,13 +128,10 @@ body {
     color:white;
 
 
-    font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+    font-family:Georgia, serif;
 
 
-    font-size:clamp(55px,4vw,85px);
+    font-size:clamp(45px,3.5vw,75px);
 
 
     font-weight:bold;
@@ -168,11 +141,9 @@ body {
 
 
 
-
-
-/* =====================================
-   VIND
-===================================== */
+/* ===============================
+   WIND
+================================ */
 
 
 .wind-window {
@@ -181,11 +152,8 @@ body {
     position:absolute;
 
 
-    left:4%;
-    top:43%;
-
-
-    width:25%;
+    left:5%;
+    top:48%;
 
 
 }
@@ -198,43 +166,10 @@ body {
     color:white;
 
 
-    font-size:clamp(25px,2vw,45px);
+    font-size:clamp(20px,2vw,35px);
 
 
-    font-weight:bold;
-
-
-}
-
-
-
-/* =====================================
-   Mobil / små skärmar
-===================================== */
-
-
-@media(max-width:1000px){
-
-
-    #clock {
-
-        font-size:60px;
-
-    }
-
-
-    #temperature {
-
-        font-size:45px;
-
-    }
-
-
-    #wind {
-
-        font-size:25px;
-
-    }
+    font-weight:600;
 
 
 }
