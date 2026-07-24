@@ -149,3 +149,64 @@ html, body {
     box-shadow:none;
 
 }
+/* ==================================
+   STEG 12.6 - DÖLJ GAMLA MASTER-VÄRDEN
+================================== */
+
+
+/* täcker gamla klockan */
+.clock-mask {
+    position:absolute;
+    top:4%;
+    left:8%;
+    width:27%;
+    height:13%;
+
+    background:#12336d;
+
+    z-index:15;
+}
+
+
+/* täcker gamla temperatur */
+.temp-mask {
+
+    position:absolute;
+    top:23%;
+    left:44%;
+    width:22%;
+    height:13%;
+
+    background:#2d72b8;
+
+    z-index:15;
+}
+
+
+/* täcker gamla vind */
+
+.wind-mask {
+
+    position:absolute;
+    top:39%;
+    left:44%;
+    width:25%;
+    height:8%;
+
+    background:#2d72b8;
+
+    z-index:15;
+}
+
+
+/* livevärden ovanpå */
+
+#clock,
+#temperature,
+#wind {
+
+    position:absolute;
+
+    z-index:20;
+
+}
