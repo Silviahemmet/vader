@@ -1,10 +1,8 @@
 /* ======================================
    Silviahemmet Dashboard
-   Master2 FINAL CSS
+   Master2 exact positioning
    ====================================== */
 
-
-/* Grund */
 
 * {
     margin:0;
@@ -13,8 +11,7 @@
 }
 
 
-html,
-body {
+html, body {
 
     width:100%;
     height:100%;
@@ -23,20 +20,21 @@ body {
 
     background:#0b2d6b;
 
-    font-family: Georgia, "Times New Roman", serif;
-
 }
 
 
 
-/* Hela skärmen */
-
 .dashboard {
 
-    position:relative;
+    position:absolute;
 
-    width:100vw;
-    height:100vh;
+    width:1920px;
+    height:1080px;
+
+    left:50%;
+    top:50%;
+
+    transform:translate(-50%,-50%);
 
     overflow:hidden;
 
@@ -44,20 +42,17 @@ body {
 
 
 
-/* MASTER BILD
-   Rör inte storleken */
+/* MASTER */
 
 .master {
 
     position:absolute;
 
+    width:1920px;
+    height:1080px;
+
     top:0;
     left:0;
-
-    width:100%;
-    height:100%;
-
-    object-fit:contain;
 
     z-index:1;
 
@@ -65,22 +60,16 @@ body {
 
 
 
-/* ======================================
-   KLOCKA
-   ====================================== */
-
+/* KLOCKA */
 
 .clock-window {
 
     position:absolute;
 
-    z-index:5;
+    left:270px;
+    top:25px;
 
-
-    /* placering */
-    top:20px;
-    left:230px;
-
+    z-index:10;
 
 }
 
@@ -89,43 +78,38 @@ body {
 
     color:white;
 
+    font-family:Georgia, serif;
+
     font-size:110px;
 
     font-weight:bold;
-
-    line-height:1;
-
-    letter-spacing:2px;
 
 }
 
 
 
-/* ======================================
-   TEMPERATUR
-   ====================================== */
-
+/* TEMPERATUR */
 
 .temp-window {
 
     position:absolute;
 
-    z-index:5;
+    left:500px;
 
+    top:245px;
 
-    left:430px;
-    top:205px;
-
+    z-index:10;
 
 }
-
 
 
 #temperature {
 
     color:white;
 
-    font-size:70px;
+    font-family:Georgia, serif;
+
+    font-size:75px;
 
     font-weight:bold;
 
@@ -133,21 +117,17 @@ body {
 
 
 
-/* ======================================
-   VIND
-   ====================================== */
-
+/* VIND */
 
 .wind-window {
 
     position:absolute;
 
-    z-index:5;
+    left:520px;
 
+    top:340px;
 
-    left:440px;
-    top:300px;
-
+    z-index:10;
 
 }
 
@@ -156,7 +136,9 @@ body {
 
     color:white;
 
-    font-size:38px;
+    font-family:Georgia, serif;
+
+    font-size:42px;
 
     font-weight:bold;
 
@@ -164,33 +146,18 @@ body {
 
 
 
-/* ======================================
-   TV / 4K Anpassning
-   ====================================== */
+/* TV skal skala ner hela designen */
+
+@media screen and (max-width:1920px) {
 
 
-@media (min-width:2000px) {
+.dashboard {
 
+    transform:
+    translate(-50%,-50%)
+    scale(calc(100vw / 1920));
 
-    #clock {
-
-        font-size:150px;
-
-    }
-
-
-    #temperature {
-
-        font-size:90px;
-
-    }
-
-
-    #wind {
-
-        font-size:50px;
-
-    }
+}
 
 
 }
