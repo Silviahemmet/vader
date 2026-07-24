@@ -28,7 +28,7 @@ body {
 
 
 /* =========================================================
-   MAIN DASHBOARD
+   DASHBOARD
    ========================================================= */
 
 
@@ -80,10 +80,10 @@ body {
     left:230px;
     top:7px;
 
+    transform:translate(300px,-5px);
+
     z-index:10;
 
-
-    transform:translate(300px,-50px);
 }
 
 
@@ -92,9 +92,9 @@ body {
     color:white;
 
     font-family:
-    "Roboto Mono",
-    "Courier New",
-    monospace;
+    Georgia,
+    "Times New Roman",
+    serif;
 
     font-size:50px;
 
@@ -103,6 +103,8 @@ body {
     line-height:1;
 
     white-space:nowrap;
+
+    font-variant-numeric:tabular-nums;
 
 }
 
@@ -118,18 +120,16 @@ body {
     position:absolute;
 
     left:430px;
-
     top:185px;
+
+    transform:translate(0px,0px);
 
     z-index:10;
 
-   transform:translate(300px,-50px);
-   
 }
 
 
 #temperature {
-
 
     color:white;
 
@@ -137,7 +137,6 @@ body {
     Georgia,
     "Times New Roman",
     serif;
-
 
     font-size:50px;
 
@@ -161,45 +160,56 @@ body {
     position:absolute;
 
     left:440px;
-
     top:300px;
 
-    z-index:10;
+    transform:translate(0px,0px);
 
+    z-index:10;
 
 }
 
 
 #wind {
 
-
     color:white;
-
 
     font-family:
     Georgia,
     "Times New Roman",
     serif;
 
-
-    font-size:36px;
-
+    font-size:50px;
 
     font-weight:bold;
 
-
     line-height:1;
 
-
     white-space:nowrap;
-
 
 }
 
 
 
 /* =========================================================
-   TV OPTIMIZATION
+   LARGE TV
    ========================================================= */
 
 
+@media (min-width:1800px) {
+
+
+    #clock {
+        font-size:50px;
+    }
+
+
+    #temperature {
+        font-size:50px;
+    }
+
+
+    #wind {
+        font-size:50px;
+    }
+
+}
