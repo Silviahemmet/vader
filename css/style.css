@@ -1,11 +1,8 @@
 /* =====================================
    Silviahemmet Dashboard
-   Master2.png FINAL BASE
-   TV 55-65"
+   Master2.png
 ===================================== */
 
-
-/* RESET */
 
 * {
     box-sizing:border-box;
@@ -25,18 +22,10 @@ body {
 
     background:#12346b;
 
-    font-family:
-    "Segoe UI",
-    Arial,
-    sans-serif;
+    font-family:"Segoe UI", Arial, sans-serif;
 
 }
 
-
-
-/* =====================================
-   HUVUDCONTAINER
-===================================== */
 
 
 .dashboard {
@@ -52,11 +41,6 @@ body {
 
 
 
-/* =====================================
-   MASTER BILD
-===================================== */
-
-
 .master {
 
     position:absolute;
@@ -64,13 +48,10 @@ body {
     left:0;
     top:0;
 
-
     width:100%;
     height:100%;
 
-
     object-fit:cover;
-
 
 }
 
@@ -83,28 +64,23 @@ body {
 
 .clock-window {
 
-
     position:absolute;
 
+    /* flyttad efter grenen */
 
-    /* vänstra blå panelen */
-
-    left:3.8%;
-
-    top:17%;
+    left:9.5%;
+    top:16%;
 
 
-    width:30%;
-
+    width:28%;
     height:15%;
 
 
     display:flex;
 
-    justify-content:center;
-
     align-items:center;
 
+    justify-content:center;
 
 }
 
@@ -112,27 +88,19 @@ body {
 
 #clock {
 
-
     color:white;
 
-
-    font-family:
-    Georgia,
+    font-family:Georgia,
     "Times New Roman",
     serif;
 
-
     font-size:clamp(65px,5vw,100px);
-
 
     font-weight:bold;
 
-
     letter-spacing:2px;
 
-
 }
-
 
 
 
@@ -143,18 +111,13 @@ body {
 
 .temp-window {
 
-
     position:absolute;
-
 
     left:5%;
 
-
     top:36%;
 
-
     width:25%;
-
 
 }
 
@@ -162,24 +125,17 @@ body {
 
 #temperature {
 
-
     color:white;
 
-
-    font-family:
-    Georgia,
+    font-family:Georgia,
     "Times New Roman",
     serif;
 
-
     font-size:clamp(55px,4vw,80px);
-
 
     font-weight:bold;
 
-
 }
-
 
 
 
@@ -190,15 +146,11 @@ body {
 
 .wind-window {
 
-
     position:absolute;
-
 
     left:5%;
 
-
     top:47%;
-
 
 }
 
@@ -206,46 +158,33 @@ body {
 
 #wind {
 
-
     color:white;
-
 
     font-size:clamp(25px,2vw,40px);
 
-
     font-weight:600;
-
 
 }
 
 
 
-/* =====================================
-   STORA TV-SKÄRMAR
-===================================== */
-
+/* TV */
 
 @media(min-width:1600px){
 
 
     #clock {
-
         font-size:100px;
-
     }
 
 
     #temperature {
-
         font-size:80px;
-
     }
 
 
     #wind {
-
         font-size:40px;
-
     }
 
 
