@@ -1,15 +1,19 @@
-/* ======================================
-   SILVIAHEMMET DASHBOARD - MASTER2
-   16:9 TV VERSION
-====================================== */
+/* =====================================================
+   SILVIAHEMMET DASHBOARD
+   65" FULLSCREEN DISPLAY
+   MASTER CANVAS: 1920 x 1080
+===================================================== */
 
+
+/* ---------- RESET ---------- */
 
 * {
-    box-sizing:border-box;
+    box-sizing: border-box;
 }
 
 
-html, body {
+html,
+body {
 
     margin:0;
     padding:0;
@@ -24,24 +28,28 @@ html, body {
 }
 
 
-body {
+/* ---------- SCREEN WRAPPER ---------- */
 
-    font-family: Georgia, "Times New Roman", serif;
+
+#app {
+
+    width:1920px;
+    height:1080px;
+
+    transform-origin:top left;
 
 }
 
 
-/* ======================================
-   MASTER SCREEN
-====================================== */
+/* ---------- MASTER ---------- */
 
 
 .master {
 
     position:relative;
 
-    width:100vw;
-    height:100vh;
+    width:1920px;
+    height:1080px;
 
     overflow:hidden;
 
@@ -51,9 +59,9 @@ body {
 
 
 
-/* ======================================
+/* =====================================================
    LOGO
-====================================== */
+===================================================== */
 
 
 .logo {
@@ -61,17 +69,20 @@ body {
     position:absolute;
 
     top:35px;
+
     right:80px;
 
     width:260px;
+
+    z-index:20;
 
 }
 
 
 
-/* ======================================
+/* =====================================================
    CLOCK
-====================================== */
+===================================================== */
 
 
 .clock-window {
@@ -79,9 +90,10 @@ body {
     position:absolute;
 
     left:230px;
+
     top:35px;
 
-    z-index:20;
+    z-index:30;
 
 }
 
@@ -89,6 +101,8 @@ body {
 .clock {
 
     color:white;
+
+    font-family:Georgia, serif;
 
     font-size:110px;
 
@@ -100,9 +114,9 @@ body {
 
 
 
-/* ======================================
+/* =====================================================
    LEFT WEATHER PANEL
-====================================== */
+===================================================== */
 
 
 .weather-panel {
@@ -110,16 +124,19 @@ body {
 
     position:absolute;
 
+
     left:25px;
 
     top:160px;
+
 
     width:680px;
 
     height:500px;
 
 
-    border:2px solid rgba(255,255,255,0.5);
+    border:2px solid rgba(255,255,255,0.55);
+
 
     border-radius:30px;
 
@@ -128,15 +145,16 @@ body {
 
 
 
-/* ======================================
+/* =====================================================
    TEMPERATURE
-====================================== */
+===================================================== */
 
 
 .temperature {
 
 
     position:absolute;
+
 
     left:420px;
 
@@ -146,18 +164,25 @@ body {
     color:white;
 
 
+    font-family:Georgia, serif;
+
+
     font-size:90px;
 
+
     font-weight:bold;
+
+
+    line-height:1;
 
 
 }
 
 
 
-/* ======================================
+/* =====================================================
    WIND
-====================================== */
+===================================================== */
 
 
 .wind {
@@ -165,7 +190,9 @@ body {
 
     position:absolute;
 
+
     left:435px;
+
 
     top:315px;
 
@@ -173,7 +200,11 @@ body {
     color:white;
 
 
+    font-family:Georgia, serif;
+
+
     font-size:40px;
+
 
     font-weight:bold;
 
@@ -182,9 +213,9 @@ body {
 
 
 
-/* ======================================
+/* =====================================================
    BUILDING IMAGE
-====================================== */
+===================================================== */
 
 
 .building {
@@ -195,15 +226,18 @@ body {
 
     right:25px;
 
+
     top:160px;
 
 
     width:900px;
 
+
     height:500px;
 
 
     border-radius:30px;
+
 
     overflow:hidden;
 
@@ -211,10 +245,12 @@ body {
 }
 
 
+
 .building img {
 
 
     width:100%;
+
 
     height:100%;
 
@@ -226,9 +262,9 @@ body {
 
 
 
-/* ======================================
-   LOWER WHITE AREA
-====================================== */
+/* =====================================================
+   BOTTOM INFORMATION PANEL
+===================================================== */
 
 
 .bottom-panel {
@@ -239,10 +275,12 @@ body {
 
     left:25px;
 
+
     bottom:30px;
 
 
-    width:calc(100% - 50px);
+    width:1870px;
+
 
     height:210px;
 
@@ -252,5 +290,49 @@ body {
 
     border-radius:30px;
 
+
+}
+
+
+
+/* =====================================================
+   FULLSCREEN SCALING
+   Fits 1920x1080 canvas to TV/browser
+===================================================== */
+
+
+@media screen {
+
+
+    #app {
+
+        transform:
+        scale(
+        min(
+        calc(100vw / 1920),
+        calc(100vh / 1080)
+        ));
+
+    }
+
+}
+
+
+
+/* =====================================================
+   REMOVE OLD ZOOM / TRANSFORMS
+===================================================== */
+
+
+.master,
+.clock-window,
+.weather-panel,
+.temperature,
+.wind,
+.building {
+
+    zoom:1 !important;
+
+    transform:none !important;
 
 }
