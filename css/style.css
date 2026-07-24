@@ -109,3 +109,39 @@ html, body {
     font-size:2vw;
     font-weight:bold;
 }
+/* LIVE PLACERING */
+
+#clock {
+    position:absolute;
+    top:3%;
+    left:7%;
+    z-index:100;
+
+    color:white;
+    font-size:5vw;
+    font-weight:bold;
+}
+
+
+#temperature {
+    position:absolute;
+    top:24%;
+    left:22%;
+    z-index:100;
+
+    color:white;
+    font-size:4vw;
+    font-weight:bold;
+}
+
+
+#wind {
+    position:absolute;
+    top:40%;
+    left:24%;
+    z-index:100;
+
+    color:white;
+    font-size:2vw;
+    font-weight:bold;
+}
