@@ -58,15 +58,12 @@ body {
 
 /* ================= CLOCK ================= */
 
-
 .clock-window {
 
     position:absolute;
 
-    left:0;
-    top:0;
-
-    transform:translate(590px,35px);
+    left:590px;
+    top:35px;
 
     z-index:10;
 
@@ -83,6 +80,8 @@ body {
 
     font-weight:bold;
 
+    line-height:1;
+
     white-space:nowrap;
 
 }
@@ -91,15 +90,12 @@ body {
 
 /* ================= TEMPERATURE ================= */
 
-
 .temp-window {
 
     position:absolute;
 
-    left:0;
-    top:0;
-
-    transform:translate(480px,210px);
+    left:520px;
+    top:210px;
 
     z-index:10;
 
@@ -116,6 +112,8 @@ body {
 
     font-weight:bold;
 
+    line-height:1;
+
     white-space:nowrap;
 
 }
@@ -124,15 +122,12 @@ body {
 
 /* ================= WIND ================= */
 
-
 .wind-window {
 
     position:absolute;
 
-    left:0;
-    top:0;
-
-    transform:translate(480px,300px);
+    left:520px;
+    top:300px;
 
     z-index:10;
 
@@ -148,6 +143,8 @@ body {
     font-size:50px;
 
     font-weight:bold;
+
+    line-height:1;
 
     white-space:nowrap;
 
