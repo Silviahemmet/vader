@@ -1,8 +1,10 @@
-/* =====================================
+/* ======================================
    Silviahemmet Dashboard
-   Master2.png layout
-   ===================================== */
+   Master2.png FINAL CSS
+   ====================================== */
 
+
+/* RESET */
 
 * {
     margin:0;
@@ -11,74 +13,100 @@
 }
 
 
-html, body {
+html,
+body {
 
     width:100%;
     height:100%;
+
     overflow:hidden;
 
     background:#073477;
 
-    font-family: Georgia, "Times New Roman", serif;
-
 }
 
 
-/* HUVUDKONTAINER */
+/* ======================================
+   HUVUDKONTAINER
+   ====================================== */
+
 
 .dashboard {
 
     position:relative;
 
     width:100vw;
+
     height:100vh;
+
+    overflow:hidden;
 
 }
 
 
-/* MASTERBILDEN */
+
+/* ======================================
+   MASTERBILD
+   Behåller original proportioner
+   ====================================== */
+
 
 .master {
 
     position:absolute;
 
-    width:100%;
-    height:100%;
-
-    object-fit:cover;
-
     top:0;
+
     left:0;
+
+
+    width:100vw;
+
+    height:100vh;
+
+
+    object-fit:fill;
+
 
 }
 
 
 
-/* ===========================
+/* ======================================
    KLOCKA
-   =========================== */
+   Placering vid grenen
+   ====================================== */
 
 
 .clock-window {
 
+
     position:absolute;
 
+
     top:20px;
+
 
     left:230px;
 
 
+
     width:380px;
+
     height:120px;
+
 
 
     display:flex;
 
     align-items:center;
+
     justify-content:center;
 
 
+
 }
+
 
 
 #clock {
@@ -86,23 +114,33 @@ html, body {
 
     color:white;
 
+
+    font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+
     font-size:110px;
 
+
     font-weight:bold;
+
 
     line-height:1;
 
 
-    letter-spacing:3px;
+    letter-spacing:2px;
+
 
 
 }
 
 
 
-/* ===========================
+/* ======================================
    TEMPERATUR
-   =========================== */
+   ====================================== */
 
 
 .temp-window {
@@ -113,19 +151,26 @@ html, body {
 
     left:430px;
 
+
     top:205px;
+
 
 
     width:260px;
 
-    height:90px;
+
+    height:100px;
+
 
 
     display:flex;
 
+
     justify-content:center;
 
+
     align-items:center;
+
 
 
 }
@@ -138,6 +183,12 @@ html, body {
     color:white;
 
 
+    font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+
     font-size:72px;
 
 
@@ -146,13 +197,16 @@ html, body {
 
     line-height:1;
 
+
+
 }
 
 
 
-/* ===========================
+
+/* ======================================
    VIND
-   =========================== */
+   ====================================== */
 
 
 .wind-window {
@@ -167,16 +221,22 @@ html, body {
     top:300px;
 
 
+
     width:300px;
 
-    height:60px;
+
+    height:70px;
+
 
 
     display:flex;
 
+
     justify-content:center;
 
+
     align-items:center;
+
 
 
 }
@@ -189,6 +249,12 @@ html, body {
     color:white;
 
 
+    font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+
     font-size:42px;
 
 
@@ -199,9 +265,23 @@ html, body {
 
 
 
-/* TV optimering */
+/* ======================================
+   4K / STORA TV-SKÄRMAR
+   ====================================== */
+
 
 @media (min-width:3000px){
+
+
+
+.clock-window {
+
+    left:300px;
+
+    top:25px;
+
+}
+
 
 
 #clock {
@@ -211,6 +291,17 @@ html, body {
 }
 
 
+
+.temp-window {
+
+    left:550px;
+
+    top:260px;
+
+}
+
+
+
 #temperature {
 
     font-size:90px;
@@ -218,11 +309,23 @@ html, body {
 }
 
 
+
+.wind-window {
+
+    left:560px;
+
+    top:380px;
+
+}
+
+
+
 #wind {
 
     font-size:55px;
 
 }
+
 
 
 }
