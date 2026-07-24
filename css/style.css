@@ -83,7 +83,7 @@ body {
     z-index:10;
 
 
-    transform:translate(300px,5px);
+    transform:translate(300px,-50px);
 }
 
 
@@ -201,28 +201,3 @@ body {
    ========================================================= */
 
 
-@media (min-width:1800px) {
-
-
-    #clock {
-
-        font-size:50px;
-
-    }
-
-
-    #temperature {
-
-        font-size:80px;
-
-    }
-
-
-    #wind {
-
-        font-size:40px;
-
-    }
-
-
-}
