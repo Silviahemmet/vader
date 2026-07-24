@@ -22,101 +22,90 @@ html, body {
     width:100%;
     height:100%;
     object-fit:contain;
-    display:block;
 }
 
 
-/* ==========================
-   LIVE FÖNSTER
-========================== */
+/* =========================
+   MASKER
+========================= */
 
 
-.window {
-    position:absolute;
-    z-index:20;
-    pointer-events:none;
-}
-
-
-/* ==========================
-   MASKER - täcker gamla siffror
-========================== */
-
+/* täcker gamla klockan 12:03 */
 
 .clock-mask {
     position:absolute;
     top:0%;
-    left:0%;
-    width:30%;
-    height:18%;
+    left:7%;
+    width:28%;
+    height:16%;
     background:#062f68;
-    z-index:10;
+    z-index:5;
 }
 
+
+/* täcker gamla temperaturen */
 
 .temp-mask {
     position:absolute;
-    top:20%;
-    left:43%;
-    width:28%;
-    height:15%;
+    top:22%;
+    left:44%;
+    width:25%;
+    height:18%;
     background:#2d72b8;
-    z-index:10;
+    z-index:5;
 }
 
+
+/* täcker gamla vinden */
 
 .wind-mask {
     position:absolute;
     top:38%;
-    left:43%;
-    width:35%;
+    left:44%;
+    width:30%;
     height:12%;
     background:#2d72b8;
-    z-index:10;
+    z-index:5;
 }
 
 
-/* ==========================
-   LEVANDE DATA
-========================== */
+
+/* =========================
+   LIVE DATA
+========================= */
 
 
 #clock {
     position:absolute;
     top:3%;
-    left:7%;
+    left:8%;
+    z-index:20;
 
     color:white;
     font-size:5vw;
     font-weight:bold;
-
-    z-index:30;
 }
 
 
 #temperature {
-
     position:absolute;
     top:23%;
-    left:50%;
+    left:48%;
+    z-index:20;
 
     color:white;
     font-size:4vw;
     font-weight:bold;
-
-    z-index:30;
 }
 
 
 #wind {
-
     position:absolute;
     top:40%;
-    left:50%;
+    left:48%;
+    z-index:20;
 
     color:white;
     font-size:2vw;
     font-weight:bold;
-
-    z-index:30;
 }
