@@ -19,126 +19,138 @@ html, body {
 
 
 .master {
+    position:absolute;
     width:100%;
     height:100%;
     object-fit:contain;
 }
 
 
-
-/* =====================
-   KLOCKA
-===================== */
+/* =========================
+   LIVE KLOCKA
+========================= */
 
 .clock-window {
-
     position:absolute;
-
     top:4%;
     left:8%;
-
-    width:28%;
+    width:25%;
     height:12%;
-
     z-index:20;
-
 }
 
 
 #clock {
-
     color:white;
-
-    font-size:4.2vw;
-
+    font-size:5vw;
     font-weight:bold;
-
     white-space:nowrap;
-
 }
 
 
 
-/* =====================
-   TEMPERATUR
-===================== */
+/* =========================
+   LIVE TEMPERATUR
+========================= */
 
 .temp-window {
-
     position:absolute;
-
-    top:25%;
-
-    left:46%;
-
-    width:18%;
-
+    top:23%;
+    left:45%;
+    width:20%;
     height:10%;
-
     z-index:20;
-
 }
 
 
 #temperature {
-
     color:white;
-
-    font-size:3.8vw;
-
+    font-size:4vw;
     font-weight:bold;
-
 }
 
 
 
-/* =====================
-   VIND
-===================== */
+/* =========================
+   LIVE VIND
+========================= */
 
 .wind-window {
-
     position:absolute;
-
-    top:40%;
-
-    left:46%;
-
-    width:20%;
-
+    top:39%;
+    left:45%;
+    width:25%;
     height:8%;
-
     z-index:20;
-
 }
 
 
 #wind {
-
     color:white;
-
     font-size:2vw;
-
     font-weight:bold;
-
 }
 
 
 
-/* =====================
-   gamla siffror bort
-===================== */
+/* =========================
+   MASKER
+   döljer MASTER-siffrorna
+========================= */
 
-.clock-mask,
-.temp-mask,
+
+.clock-mask {
+
+    position:absolute;
+
+    top:3%;
+    left:7%;
+
+    width:28%;
+    height:14%;
+
+    background:#0b326c;
+
+    z-index:15;
+}
+
+
+
+.temp-mask {
+
+    position:absolute;
+
+    top:22%;
+    left:43%;
+
+    width:24%;
+    height:14%;
+
+    background:#2d72b8;
+
+    z-index:15;
+}
+
+
+
 .wind-mask {
 
-    display:none;
+    position:absolute;
 
+    top:38%;
+    left:43%;
+
+    width:28%;
+    height:10%;
+
+    background:#2d72b8;
+
+    z-index:15;
 }
 
 
-/* rena live-fönster */
+
+/* alltid genomskinliga livefält */
 
 #clock,
 #temperature,
@@ -147,66 +159,5 @@ html, body {
     background:none;
     border:none;
     box-shadow:none;
-
-}
-/* ==================================
-   STEG 12.6 - DÖLJ GAMLA MASTER-VÄRDEN
-================================== */
-
-
-/* täcker gamla klockan */
-.clock-mask {
-    position:absolute;
-    top:4%;
-    left:8%;
-    width:27%;
-    height:13%;
-
-    background:#12336d;
-
-    z-index:15;
-}
-
-
-/* täcker gamla temperatur */
-.temp-mask {
-
-    position:absolute;
-    top:23%;
-    left:44%;
-    width:22%;
-    height:13%;
-
-    background:#2d72b8;
-
-    z-index:15;
-}
-
-
-/* täcker gamla vind */
-
-.wind-mask {
-
-    position:absolute;
-    top:39%;
-    left:44%;
-    width:25%;
-    height:8%;
-
-    background:#2d72b8;
-
-    z-index:15;
-}
-
-
-/* livevärden ovanpå */
-
-#clock,
-#temperature,
-#wind {
-
-    position:absolute;
-
-    z-index:20;
 
 }
