@@ -77,11 +77,13 @@ body {
 
     position:absolute;
 
-    left:500px;
+    left:230px;
     top:20px;
 
     z-index:10;
 
+
+    transform:translate(300px,100px);
 }
 
 
