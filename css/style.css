@@ -4,6 +4,8 @@
    ========================================================= */
 
 
+/* ================= RESET ================= */
+
 * {
     margin:0;
     padding:0;
@@ -25,6 +27,8 @@ body {
 
 
 
+/* ================= DASHBOARD ================= */
+
 .dashboard {
 
     position:relative;
@@ -37,6 +41,8 @@ body {
 }
 
 
+
+/* ================= MASTER IMAGE ================= */
 
 .master {
 
@@ -62,8 +68,10 @@ body {
 
     position:absolute;
 
-    left:200px;
-    top:35px;
+    left:0;
+    top:0;
+
+    transform:translate(590px,35px);
 
     z-index:10;
 
@@ -74,7 +82,10 @@ body {
 
     color:white;
 
-    font-family:Georgia,"Times New Roman",serif;
+    font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
 
     font-size:50px;
 
@@ -84,10 +95,13 @@ body {
 
     white-space:nowrap;
 
+    font-variant-numeric:tabular-nums;
+
 }
-/* ===============================
-   TEMPERATURE POSITION
-   =============================== */
+
+
+
+/* ================= TEMPERATURE ================= */
 
 .temp-window {
 
@@ -102,10 +116,6 @@ body {
 
 }
 
-
-/* ===============================
-   TEMPERATURE TEXT
-   =============================== */
 
 #temperature {
 
@@ -128,9 +138,7 @@ body {
 
 
 
-/* ===============================
-   WIND POSITION
-   =============================== */
+/* ================= WIND ================= */
 
 .wind-window {
 
@@ -145,10 +153,6 @@ body {
 
 }
 
-
-/* ===============================
-   WIND TEXT
-   =============================== */
 
 #wind {
 
@@ -171,7 +175,23 @@ body {
 
 
 
+/* ================= TV OPTIMIZATION ================= */
+
+@media (min-width:1800px) {
 
 
+    #clock {
+        font-size:50px;
+    }
+
+
+    #temperature {
+        font-size:50px;
+    }
+
+
+    #wind {
+        font-size:50px;
+    }
 
 }
